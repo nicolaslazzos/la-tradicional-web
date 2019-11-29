@@ -1,0 +1,392 @@
+/*
+    Created on : 27/08/2016, 19:26:41
+    Author     : Lazzos
+*/
+/*BORDO: #58233B*/
+/*AMARILLO: #F1C40F*/
+/*AMARILLO PESTAÑA ACTIVA: #E5C400*/
+/*BLANCO FONDO: #F9F9F9*/
+/*BLANCO ITEMS: #FFFFFF*/
+/*AZUL FOOTER: #283648*/
+/*AZUL INICIO SESION: #4C6888*/
+html, body{
+    margin: 0;
+    padding: 0;
+    background-color: #F9F9F9;
+}
+/*BARRA DE NAVEGACION*/
+#menu{
+    position: fixed;
+    height: 55px;
+    width: 100%;
+    background-color: #58233B;
+    box-shadow: -1px 1px 9px 0px rgba(0,0,0,0.75);
+    z-index: 80;
+}
+#menu div{
+    position: relative;
+    height: 55px;
+    width: 75%;
+    margin: 0 auto 0 auto;
+    background-color: transparent;
+}
+#menu div img{
+    height: 120%;
+    margin: 5px 0 0 0;
+    border-radius: 50%;
+    box-shadow: -1px 1px 9px 0px rgba(0,0,0,0.75);
+}
+#menu div ul{
+    list-style-type: none;
+    padding: 0;
+    width: 80%;
+    height: auto;
+    float: right;
+}
+#menu div ul li{
+    display: inline-block;
+    margin: 0 5% 0 5%;
+    vertical-align: middle;
+    float: right;
+    padding-bottom: 3px;
+    border-bottom: 2px solid;
+    border-color: transparent;
+    transition: border-color;
+}
+#menu div ul li.pestana-activa{
+    border-color: #E5C400;
+}
+#menu div ul li a{
+    display: block;
+    width: 100%;
+    font-family: "Open Sans";
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 100%;
+}
+@media screen and (max-width: 900px) {
+    #menu div ul li a{
+        font-size: 90%;
+    }
+}
+@media screen and (max-width: 820px) {
+    #menu div ul li a{
+        font-size: 80%;
+    }
+}
+#menu div ul li:first-child{
+    padding-bottom: 0;
+}
+#menu div ul li:hover{
+    border-color: #E5C400;
+}
+#menu div ul li a i{
+    font-size: 150%;
+    bottom: 0;
+}
+/*SLIDER Y PROMOCIONES*/
+#promociones{
+    width: auto;
+}
+#promociones #fondo{
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    border-bottom: solid 6px #F1C40F;
+}
+#promociones #slider{
+    position: absolute;
+    width: 70%;
+    margin: 100px 17% 0 13.5%;
+}
+#promociones #slider .imagenes{
+    list-style-type: none;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: auto;
+    border: 10px solid #FFFFFF;
+    border-bottom: 7px solid #FFFFFF;
+    box-shadow: 3px 4px 16px -3px rgba(0,0,0,0.69);
+    z-index: 10;
+}
+#promociones #slider .imagenes li{
+    height: auto;
+    padding: 0;
+    display: none;
+    background-color: #FFFFFF;
+}
+#promociones #slider .imagenes li.imagen-activa{
+    display: block;
+}
+#promociones #slider .imagenes li img{
+    width: 100%;
+    height: auto;
+}
+/*CONTROLES DEL SLIDER*//*CODIGO FEO - TRATAR DE LIMPIAR*/
+#promociones #slider .imagenes #controles{
+    display: block;
+}
+.imagenes #controles div{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+div .controles{
+    position: absolute;
+    height: 10px;
+    width: 20%;
+    bottom: 0;
+    text-align: center;
+    padding: 0;
+    margin: 0 40% 30px 40%;
+    z-index: 20;
+}
+#slider .imagenes #controles div .controles li{
+    background: #FFFFFF;
+    border-radius: 50%;
+    display: inline-block;
+    height: 8px;
+    width: 8px;
+    margin: 0 2px;
+    cursor: pointer;
+}
+#slider .imagenes #controles div .controles li.control-activo{
+    background: #F1C40F;
+}
+/*PESTAÑAS DE PRODUCTOS*/
+#pedidos{
+    position: relative;
+    width: 100%;
+    margin: 7% 0 0 0;
+    text-align: center;
+}
+#pedidos p{
+    font-family: "Poppins";
+    font-size: 3.6vw;
+    color: #283648;
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+#pedidos #pestanas-productos{
+    position: relative;
+    border-top: solid 2px #283648;
+    width: 100%;
+    height: auto;
+}
+#pedidos #pestanas-productos .pestana{
+    float: left;
+    width: 50%;
+    height: 128px;
+}
+#pedidos #pestanas-productos #empanadas{
+    background: url("../img/pestana_empanadas.png") no-repeat;
+    background-size: 100%;
+}
+#pedidos #pestanas-productos #tartas{
+    background: url("../img/pestana_tartas.png") no-repeat;
+    background-size: 100%;
+}
+#pedidos #pestanas-productos .pestana a{
+    font-family: "Poppins";
+    font-size: 3.2vw;
+    font-weight: bold;
+    text-decoration: none;
+}
+#pedidos #pestanas-productos #empanadas a{
+    color: #FFFFFF;
+    float: right;
+    margin: 8% 15px 0 0;
+}
+#pedidos #pestanas-productos #tartas a{
+    color: #283648;
+    float: left;
+    margin: 8% 0 0 15px;
+}
+/*SECCION DE PRODUCTOS*/
+#productos{
+    position: relative;
+    margin: 10% auto 0 auto;
+    width: 80%;
+    height: 100%;
+}
+#productos ul{
+    position: absolute;
+    float: left;
+    list-style-type: none;
+    padding: 0;
+}
+#productos ul li{
+    display: table-cell;
+    width: 30%;
+}
+.item{
+    margin: 15px 15px 0px 15px;
+    border: solid 1px #D3D3D3;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    width: 90%;
+}
+.item p{
+    font-family: "Poppins";
+    color: #58233B;
+    font-size: 120%;
+    line-height: 1;
+    font-weight: bold;
+    margin: 8px 8px 8px 8px;
+    height: 75px;
+}
+.item p .precio{
+    color: #283648;
+    font-size: 150%;
+    float: right;
+}
+.item p .descripcion{
+    color: #283648;
+    font-weight: lighter;
+    font-size: 70%;
+    margin-top: 20px;
+}
+.item input, .item button{
+    display: inline-block;
+}
+.item .agregar{
+    background-color: #F1C40F;
+    border: solid 1px #283648;
+    font-family: "Poppins";
+    color: #283648;
+    font-size: 0.8vw;
+    font-weight: bold;
+    border-radius: 2px;
+    margin: 0 2% 3% 1%;
+    cursor: pointer;
+    width: 46%;
+    height: 27px;
+}
+.agregar:focus{
+    outline: 0;
+}
+.agregar:active{
+    transform: translateY(2px);
+}
+.item .cantidad{
+    float: left;
+    margin: 0 2% 1% 3%;
+    width: 44%;
+    height: 23px;
+    border: solid 1px #283648;
+    border-radius: 2px;
+    font-family: "Poppins";
+    font-weight: bold;
+    color: #283648;
+    font-size: 1.8vw;
+    text-align: center;
+}
+.cantidad:focus{
+    outline: 0;
+}
+/*CONOCE MAS*/
+#conocemas{
+    position: relative;
+    top: 840px;
+    width: 100%;
+    background: url(../img/cooking.png) no-repeat;
+    background-size: 100%;
+    text-align: right;
+    overflow: hidden;
+}
+#conocemas p{
+    font-family: "Poppins";
+    font-size: 2.3vw;
+    font-weight: bold;
+    color: #FFFFFF;
+    width: 60%;
+    margin: 20px 11% 10px auto;
+}
+#conocemas p span{
+    font-weight: normal;
+    color: #283648;
+    font-size: 80%;
+    line-height: 1;
+}
+#conocemas p span a{
+    color: #FFFFFF;
+    cursor: pointer;
+    text-decoration: none;
+}
+/*PIE DE PAGINA*/
+footer{
+    position: relative;
+    width: 100%;
+    background-color: #283648;
+    top: 840px;
+    overflow: hidden;
+}
+footer #contenedor-footer{
+    width: 80%;
+    margin: 30px auto 30px auto;
+}
+footer contenedo-foote div{
+    width: 15%;
+    float: left;
+}
+footer #contenedor-footer div ul{
+    padding: 0;
+    list-style-type: none;
+    float: left;
+    margin: 0 30px 0 0px;
+}
+#contenedor-footer div ul li a{
+    text-decoration: none;
+    font-family: "Poppins";
+    color: #4C6888;
+    font-size: 1vw;
+}
+#contenedor-footer div ul li .footer-title{
+    color: #FFFFFF;
+}
+#ingresar{
+    overflow: hidden;
+    float: right;
+    background-color: #324963;
+    width: 40%;
+    border-radius: 3px 3px 3px 3px;
+    margin-bottom: 60px;
+}
+#ingresar input{
+    margin: 10px 3% 10px 3%;
+    width: 93%;
+    height: 22px;
+    border: solid 1px #FFFFFF;
+    border-radius: 3px 3px 3px 3px;
+    font-family: "Poppins";
+}
+#ingresar button{
+    float: left;
+    margin: 8px 10px 10px 10px;
+    height: 30px;
+    font-family: "Poppins";
+    color: #283648;
+    background-color: #F1C40F;
+    border: solid 1px #F1C40F;
+    font-size: 1.1vw;
+    border-radius: 3px 3px 3px 3px;
+}
+#ingresar #crear{
+    display: inline-block;
+    margin: 10px auto 0px 13%;
+    font-family: "Poppins";
+    color: #FFFFFF;
+    font-size: 1.1vw;
+    text-decoration: none;
+}
+#contenedor-footer hr{
+    position: relative;
+    width: 100%;
+    background-color: #324963;
+    height: 2px;
+    border: 0;
+}
